@@ -80,7 +80,7 @@ hex 123456789abcdef0 decimal constant solution
 
 create valid? ' up-valid? , ' left-valid? , ' right-valid? , ' down-valid? , 
 	does> 
-	ith execute 
+	iterate execute 
 ;
 
 create step -4 , -1 , 1 , 4 , 
