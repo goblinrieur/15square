@@ -18,7 +18,7 @@ see [LICENSE](LICENSE) file
 
 # WIP : 2020-09-24
 
-make it public & permet it to be injected in [gforth gadget container](https://hub.docker.com/r/francoispussault/gforthgadgets)
+make it public & permit it to be injected in [gforth gadget container](https://hub.docker.com/r/francoispussault/gforthgadgets)
 
 and of course being ran by his own.
 
@@ -26,6 +26,6 @@ and of course being ran by his own.
 
 - [X] Having a running version
 - [X] Indent existing part of code
-- [ ] Add a move count might be interesting
+- [X] Add a move count might be interesting 
 - [ ] Update its display for a better view 
 
