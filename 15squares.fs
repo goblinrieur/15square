@@ -27,7 +27,19 @@ cell 8 <> [if] s" 64-bit system required" exception throw [then]
 hex 123456789abcdef0 decimal constant solution
 \ get constant solution to manage shufle random play board & compare it to win avoid many useless code
 
+\ move count
+variable movecount
+
 \ Utility
+: movecount+ ( x -- x+1 )
+	movecount @ 1 + movecount !
+;
+
+: .movecount ( -- s ) 
+	5 2 at-xy ." moves count : " movecount @ . cr 
+	movecount+
+;
+
 : 3dup   
 	2 pick 
 	2 pick 
@@ -196,10 +208,11 @@ create (rnd)   utime drop ,
 	page 
 	cr cr 
 	dup 
+	.movecount
 	.board 
 	.help
 	key case
-		[char] q of bye endof
+		[char] q of cr cr bye endof
 		[char] i of down ?move endof
 		[char] j of right ?move endof
 		[char] k of up ?move endof
