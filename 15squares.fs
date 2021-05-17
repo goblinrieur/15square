@@ -134,7 +134,7 @@ create step -4 , -1 , 1 , 4 ,
  
 \ Print the empty chars for hole
 : .hole   
-	3 spaces
+	 3 spaces
 ;
 
 : .tile ( u -- ) 
@@ -144,8 +144,8 @@ create step -4 , -1 , 1 , 4 ,
 		dup 
 		10 < if 
 			space 
-		then . 
-	then 
+		then .
+	then
 ;
 
 \ Draw the board
@@ -217,6 +217,11 @@ create (rnd)   utime drop ,
 		[char] j of right ?move endof
 		[char] k of up ?move endof
 		[char] l of left ?move endof
+		[char] Q of cr cr bye endof
+		[char] I of down ?move endof
+		[char] J of right ?move endof
+		[char] K of up ?move endof
+		[char] L of left ?move endof
 	endcase 
 ;
  
