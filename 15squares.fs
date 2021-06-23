@@ -25,7 +25,7 @@ cell 8 <> [if] s" 64-bit system required" exception throw [then]
 3 constant down
  
 hex 123456789abcdef0 decimal constant solution
-\ get constant solution to manage shufle random play board & compare it to win avoid many useless code
+\ get constant solution to manage shuffle random play board & compare it to win avoid many useless code
 
 \ move count
 variable movecount
@@ -123,7 +123,7 @@ create step -4 , -1 , 1 , 4 ,
 : hole ( s -- h ) 
 	16 0 do 
 		dup 
-		i hole? if 	\ we are at hole coordonates
+		i hole? if 	\ we are at hole coordinates
 			drop 
 			i unloop 
 			exit 
@@ -171,7 +171,7 @@ create step -4 , -1 , 1 , 4 ,
 	3 spaces ." q quit" cr
 ;
 
-\ Pseudorandom number generator:
+\ Pseudo-random number generator:
 create (rnd)   utime drop ,
 : rnd   
 	(rnd) @ dup 13 lshift xor dup 17 rshift xor dup dup 5 lshift xor (rnd) ! 
